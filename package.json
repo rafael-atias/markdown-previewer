@@ -1,0 +1,33 @@
+{
+  "name": "markdown-previewer",
+  "version": "1.0.0",
+  "description": "a markdown previewer",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rafael-atias/markdown-previewer.git"
+  },
+  "author": "Rafael Atias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafael-atias/markdown-previewer/issues"
+  },
+  "homepage": "https://github.com/rafael-atias/markdown-previewer#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.8.2",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^24.9.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
