@@ -1,28 +1,19 @@
-/* 
-Problematic cases right now:
-- small screens landscape orientation: the header 
-  is so small that the user cannot see the heading
-- big screens portrait orientation: the header
-  is very big and the heading is very small
-*/
-
 /* BASE RULES */
 
 html {
     width: 100%;
     height: 100%;
-    box-sizing: content-box;
-    font-size: 16px;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     position: absolute;
+    overflow: hidden;
 }
 
 body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    background-color: red;
+    overflow: hidden;
     position: relative;
 }
 
@@ -31,7 +22,7 @@ body {
 header {
     width: 100%;
     overflow: hidden;
-    height: 7%;
+    height: 2rem;
     top: 0px;
     border-bottom: thin solid grey;
     background-color: white;
@@ -42,20 +33,20 @@ h1 {
     text-align: center;
     line-height: 50%;
     color: #5c5b5b;
-    font-size: 0.9rem;
+    font-size: 1.2em;
 }
 
 .layout {
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
+    font-size: 1em;
 }
 
 div.layout {
     margin-top: -5px;
     height: 52vh;
-    background-color: greenyellow;
     padding-right: 5%;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 /* In textarea and textarea:focus, the border, resize
@@ -70,19 +61,20 @@ textarea.layout {
     border-bottom: thin solid grey;
 
     width: 100vw;
-    height: 49vh;
-
-    background-color: aquamarine;
+    height: 45vh;
+    overflow-y: auto;
 }
 
 textarea:focus {
     outline: none;
 }
 
+/* min-width: 450px */
+@media (min-width: 28.125rem) {
 
-@media(min-width: 450px) {
     header {
-        height: 10vh;
+        height: 4.375rem;
+        /* approx. 10vh */
     }
 
     h1 {
@@ -99,6 +91,8 @@ textarea:focus {
     .layout {
         width: 50vw;
         height: 100vh;
+        min-height: 100vh;
+        overflow: hidden;
     }
 
     div.layout {
@@ -117,5 +111,40 @@ textarea:focus {
         margin-left: 0;
         width: 50vw;
         height: 90vh;
+    }
+}
+
+/* CORNER CASES */
+
+/*
+min-height: 301px
+max-height: 600px
+ */
+@media (min-height: 18.8125rem) and (max-height: 37.5rem) {
+    header {
+        height: 3rem;
+    }
+
+    h1 {
+        line-height: 1.4rem;
+        font-size: 1rem;
+    }
+}
+
+/* 340px approximately, 18.82 em */
+@media(max-height:21.25rem) {
+    header {
+        height: 1.6rem;
+    }
+
+    h1 {
+        line-height: 0.3rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 449px) {
+    h1 {
+        font-size: 0.7rem;
     }
 }
