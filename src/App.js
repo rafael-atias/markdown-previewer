@@ -1,4 +1,6 @@
 import React from 'react';
+import Marked from "marked";
+import DOMPurify from "dompurify";
 import './App.css';
 
 export default class App extends React.Component {
@@ -25,10 +27,16 @@ export default class App extends React.Component {
           <h1>A Markdown Previewer</h1>
         </header>
         <section>
-          <textarea id="editor" className="layout" value={this.state.content} onChange={this.changeHandler}></textarea>
-          <div id="preview" className="layout">{this.state.content}</div>
+          <textarea
+            id="editor"
+            className="layout"
+            value={this.state.content}
+            onChange={this.changeHandler}></textarea>
+          <div id="preview"
+            className="layout"
+            dangerouslySetInnerHTML={({ __html: DOMPurify.sanitize(Marked(this.state.content)) })}></div>
         </section>
-      </article >
+      </article>
     );
   }
 }
