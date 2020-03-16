@@ -72,6 +72,11 @@ textarea:focus {
 /* min-width: 450px */
 @media (min-width: 28.125rem) {
 
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
     header {
         height: 4.375rem;
         /* approx. 10vh */
