@@ -23,13 +23,13 @@ header {
     width: 100%;
     overflow: hidden;
     height: 2rem;
-    top: 0px;
+    top: 0;
     border-bottom: thin solid grey;
     background-color: white;
     padding-right: 5%;
 }
 
-h1 {
+header h1 {
     text-align: center;
     line-height: 50%;
     color: #5c5b5b;
@@ -47,6 +47,9 @@ div.layout {
     height: 52vh;
     padding-right: 5%;
     overflow-y: auto;
+
+    /* give a border between the textarea and the preview */
+    border-top: 2px solid grey;
 }
 
 /* In textarea and textarea:focus, the border, resize
@@ -56,28 +59,29 @@ behavior of the textarea field */
 textarea.layout {
     border: none;
     resize: none;
-
-    /* give a border between the textarea and the preview */
-    border-bottom: thin solid grey;
-
     width: 100vw;
     height: 45vh;
     overflow-y: auto;
 }
 
-textarea:focus {
+textarea.layout:focus {
     outline: none;
 }
 
 /* min-width: 450px */
 @media (min-width: 28.125rem) {
 
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
     header {
         height: 4.375rem;
         /* approx. 10vh */
     }
 
-    h1 {
+    header h1 {
         font-size: 1.2rem;
         line-height: 2rem;
     }
@@ -90,27 +94,26 @@ textarea:focus {
     /* makes both textarea and #preview fill both halves of the screen */
     .layout {
         width: 50vw;
-        height: 100vh;
-        min-height: 100vh;
         overflow: hidden;
     }
 
     div.layout {
         margin-top: 0;
         margin-right: -5px;
-        height: 90vh;
+        height: 87.5vh;
         padding-bottom: 5px;
+        border-top: none;
+
+        /* give a border between the textarea and the preview */
+        border-left: thin solid grey;
     }
 
     textarea.layout {
-        /* give a border between the textarea and the preview */
-        border-right: thin solid grey;
-
-        /* makes the textarea fits the entire left half of the screen */
+        /* makes the textarea fit the entire left half of the screen */
         margin-top: 0;
         margin-left: 0;
         width: 50vw;
-        height: 90vh;
+        height: 87.5vh;
     }
 }
 
@@ -125,7 +128,7 @@ max-height: 600px
         height: 3rem;
     }
 
-    h1 {
+    header h1 {
         line-height: 1.4rem;
         font-size: 1rem;
     }
@@ -137,14 +140,14 @@ max-height: 600px
         height: 1.6rem;
     }
 
-    h1 {
+    header h1 {
         line-height: 0.3rem;
         font-size: 1rem;
     }
 }
 
 @media (max-width: 449px) {
-    h1 {
+    header h1 {
         font-size: 0.7rem;
     }
 }
