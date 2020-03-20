@@ -1,7 +1,8 @@
 import React from 'react';
-import Marked from "marked";
 import ReadDefaultContent from "./readDefaultContent";
+import Marked from "marked";
 import DOMPurify from "dompurify";
+import Editor from "./Editor";
 import './App.css';
 
 export default class App extends React.Component {
@@ -28,11 +29,9 @@ export default class App extends React.Component {
           <h1>A Markdown Previewer</h1>
         </header>
         <section>
-          <textarea
-            id="editor"
-            className="layout"
-            value={this.state.content}
-            onChange={this.changeHandler}></textarea>
+          <Editor
+            content={this.state.content}
+            changeHandler={this.changeHandler} />
           <div id="preview"
             className="layout"
             dangerouslySetInnerHTML={({ __html: DOMPurify.sanitize(Marked(this.state.content)) })}></div>
