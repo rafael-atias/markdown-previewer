@@ -1,5 +1,6 @@
 import React from 'react';
 import Marked from "marked";
+import ReadDefaultContent from "./readDefaultContent";
 import DOMPurify from "dompurify";
 import './App.css';
 
@@ -8,7 +9,7 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      content: "",
+      content: ReadDefaultContent() || "",
     };
 
     this.changeHandler = this.changeHandler.bind(this);
