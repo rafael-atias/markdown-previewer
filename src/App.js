@@ -1,8 +1,7 @@
 import React from 'react';
 import ReadDefaultContent from "./readDefaultContent";
-import Marked from "marked";
-import DOMPurify from "dompurify";
 import Editor from "./Editor";
+import Preview from "./Preview";
 import './App.css';
 
 export default class App extends React.Component {
@@ -32,9 +31,7 @@ export default class App extends React.Component {
           <Editor
             content={this.state.content}
             changeHandler={this.changeHandler} />
-          <div id="preview"
-            className="layout"
-            dangerouslySetInnerHTML={({ __html: DOMPurify.sanitize(Marked(this.state.content)) })}></div>
+          <Preview content={this.state.content} />
         </section>
       </article>
     );
