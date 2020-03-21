@@ -73,5 +73,5 @@ export default function readDefaultContent() {
         "### Inline code\n" +
         "When you don't need a block of code, insert just a chunk of code using just a backtick to mark the beginning and the end of the code. \n" +
         "\n" +
-        "For example, `I am inline code`.\n";
+        "For example, `I am some inline code`.\n";
 }
