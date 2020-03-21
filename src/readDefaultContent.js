@@ -8,7 +8,7 @@ export default function readDefaultContent() {
         "\n" +
         "### Headings\n" +
         "\n" +
-        "Use a \# or underline a phrase with some dashes \-\n" +
+        "Use a # or underline a phrase with some dashes -\n" +
         "\n" +
         "### Subheadings\n" +
         "The level of a subheading can be set with the same number of hashes: if you want a heading 2, insert 2 hashes; a heading 3, insert 3 hashes, etc.\n" +
@@ -20,7 +20,7 @@ export default function readDefaultContent() {
         "Very similar to the bold font, surround a word or phrase with just one star *in exactly this way *.\n" +
         "\n" +
         "### Blockquote\n" +
-        "To style a text as a blockquote, just introduce the paragraph with a \> symbol: \n" +
+        "To style a text as a blockquote, just introduce the paragraph with a > symbol: \n" +
         "\n" +
         "> One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.\n" +
         "\n" +

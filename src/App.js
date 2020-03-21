@@ -1,5 +1,4 @@
 import React from 'react';
-import ReadDefaultContent from "./readDefaultContent";
 import Editor from "./Editor";
 import Preview from "./Preview";
 import './App.css';
@@ -8,17 +7,11 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      content: ReadDefaultContent() || "",
-    };
-
     this.changeHandler = this.changeHandler.bind(this);
   }
 
   changeHandler(event) {
-    this.setState({
-      content: event.target.value,
-    });
+    this.props.changeHandler(event);
   }
 
   render() {
@@ -29,9 +22,9 @@ export default class App extends React.Component {
         </header>
         <section>
           <Editor
-            content={this.state.content}
+            content={this.props.content}
             changeHandler={this.changeHandler} />
-          <Preview content={this.state.content} />
+          <Preview content={this.props.content} />
         </section>
       </article>
     );

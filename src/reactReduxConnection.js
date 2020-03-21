@@ -1,17 +1,19 @@
 import App from "./App";
 import React from "react";
-import { createStore, connect } from "redux";
+import { createStore } from "redux";
+import { connect } from "react-redux";
+import ReadDefaultContent from "./readDefaultContent";
 
-export const WRITE = "WRITE";
+const WRITE = "WRITE";
 
-export const writeMarkdown = function (text) {
+const writeMarkdown = function (text) {
     return {
         type: WRITE,
         text,
     }
 };
 
-export const mdReducer = function (state = "", action) {
+const mdReducer = function (state = "", action) {
     const possibleActions = {
         WRITE: function () {
             return `${state}${action.text}`;
@@ -23,13 +25,13 @@ export const mdReducer = function (state = "", action) {
 
 export const store = createStore(mdReducer);
 
-export const mapStateToProps = function (state) {
+const mapStateToProps = function (state) {
     return {
         text: state,
     }
 };
 
-export const mapDispatchToProps = function (dispatch) {
+const mapDispatchToProps = function (dispatch) {
     return {
         addNewContent: function (text) {
             dispatch(writeMarkdown(text));
@@ -37,15 +39,28 @@ export const mapDispatchToProps = function (dispatch) {
     };
 };
 
-class Presentational extends React.Component {
-    // eslint-disable-next-line no-useless-constructor
+export class Presentational extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            content: ReadDefaultContent() || "",
+        }
+
+        this.changeHandler = this.changeHandler.bind(this);
+    }
+
+    changeHandler(event) {
+        this.setState({
+            content: event.target.value,
+        });
     }
 
     render() {
         return (
-            <App />
+            <App
+                changeHandler={this.changeHandler}
+                content={this.state.content} />
         );
     }
 }
