@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { store } from "./reactReduxConnection/reduxStore";
-import { ConnectedComponent as Container } from "./reactReduxConnection/ConnectedComponent";
+import { store } from "./reactRedux/reduxStore";
+import { ConnectedComponent as Container } from "./reactRedux/ConnectedComponent";
 
 export default class AppWrapper extends React.Component {
     render() {
