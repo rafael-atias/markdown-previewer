@@ -16,7 +16,7 @@ export default function readDefaultContent() {
         "To bold a word or phrase, just surround it with a pair of stars **in this way**.\n" +
         "\n" +
         "### Italics\n" +
-        "Very similar to the bold font, surround a word or phrase with just one star *in exactly this way *.\n" +
+        "Very similar to the bold font, surround a word or phrase with just one star *in exactly this way*.\n" +
         "\n" +
         "### Blockquote\n" +
         "To style a text as a blockquote, just introduce the paragraph with a > symbol: \n" +
