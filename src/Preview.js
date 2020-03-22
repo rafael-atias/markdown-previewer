@@ -5,7 +5,16 @@ import highlightJs from "highlight.js";
 
 Marked.setOptions({
     langPrefix: "language-",
+    // makes Marked.JS to hide Exceptions
     silent: true,
+
+    // makes Marked.JS to support Github-flavored Markdown
+    gfm: true,
+
+    // uses <br /> tags on a single-line breaks
+    breaks: true,
+
+    // highlighting code block function
     highlight: (function (module) {
         return function (code, language) {
             return module.highlightAuto(

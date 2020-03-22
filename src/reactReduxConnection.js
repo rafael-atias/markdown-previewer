@@ -39,7 +39,7 @@ const mapDispatchToProps = function (dispatch) {
     };
 };
 
-export class Presentational extends React.Component {
+class Presentational extends React.Component {
     constructor(props) {
         super(props);
 
