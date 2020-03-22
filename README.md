@@ -1,5 +1,5 @@
 # User stories
-These are the user stories this project shold fulfill:
+These are the user stories [this project](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer ) should fulfill:
 
 User Story #1: I can see a textarea element with a corresponding id="editor".
 
