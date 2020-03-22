@@ -32,7 +32,7 @@ export default function readDefaultContent() {
         "1. is\n" +
         "1. an\n" +
         "1. ordered\n" +
-        "1. lists\n" +
+        "1. list\n" +
         "\n" +
         "An item in an ordered list only requires of a number(any number, really) followed by a period.\n" +
         "\n" +
@@ -50,7 +50,7 @@ export default function readDefaultContent() {
         "1. The anchor text, that goes between brackets\n" +
         "1. The url, that goes in parenthesis\n" +
         "\n" +
-        "This is an instance of a[link in Markdown](https://www.google.com) \n" +
+        "This is an instance of a [link in Markdown](https://www.google.com) \n" +
         "\n" +
         "### Images\n" +
         "Images are very similar to links, but instead of two, they have three parts: \n" +
@@ -64,9 +64,9 @@ export default function readDefaultContent() {
         "\n" +
         "To introduce a code block, just mark the beginning and then end of the code snippet with 3 backticks\n" +
         "\n" +
-        "```\n" +
+        "```javascript\n" +
         "function add(m, n) {\n" +
-        "return m + n;\n" +
+        "  return m + n;\n" +
         "}\n" +
         "```\n" +
         "\n" +
