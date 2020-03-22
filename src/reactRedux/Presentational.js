@@ -1,6 +1,6 @@
 import React from "react";
-import App from "../App";
-import ReadDefaultContent from "../readDefaultContent";
+import App from "../reactComponents/App";
+import ReadDefaultContent from "../reactComponents/readDefaultContent";
 
 /**
  * A presentational React component that
