@@ -1,6 +1,5 @@
 export default function readDefaultContent() {
-    return "This is a Markdown previewer\n" +
-        "----------------------------\n" +
+    return "# This is a Markdown previewer\n" +
         "\n" +
         "A Markdown previewer can help you to produce HTML code in a fast and easy way: \n" +
         "\n" +
@@ -14,7 +13,7 @@ export default function readDefaultContent() {
         "The level of a subheading can be set with the same number of hashes: if you want a heading 2, insert 2 hashes; a heading 3, insert 3 hashes, etc.\n" +
         "\n" +
         "### Bold text\n" +
-        "To bold a word or phrase, just surround it with a pair of stars **in this way **.\n" +
+        "To bold a word or phrase, just surround it with a pair of stars **in this way**.\n" +
         "\n" +
         "### Italics\n" +
         "Very similar to the bold font, surround a word or phrase with just one star *in exactly this way *.\n" +
