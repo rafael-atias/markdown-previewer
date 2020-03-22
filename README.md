@@ -1,3 +1,11 @@
+# TODOS
+A list of possible features to implement:
+- An HTML previewer, to copy the HTML code generated
+- Insert a toolbar with buttons that the user could press to generate Markdown code (H1, H2, bold...)
+- Save the Markdown code locally as a `.md` file.
+- Save the preview locally as a `.docx`, `.odt` or `.pdf` file
+- save the HTML generated as an `.html` file.
+
 # User stories
 These are the user stories [this project](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer ) should fulfill:
 
