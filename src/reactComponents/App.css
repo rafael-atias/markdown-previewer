@@ -86,6 +86,13 @@ textarea.layout:focus {
         line-height: 2rem;
     }
 
+    header p {
+        font-size: 0.6rem;
+        position: absolute;
+        top: 0;
+        left: 94%;
+    }
+
     .App section {
         display: flex;
         justify-content: space-around;
