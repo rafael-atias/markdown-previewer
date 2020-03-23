@@ -1,6 +1,7 @@
 # TODOS
 A list of possible features to implement:
 - An HTML previewer, to copy the HTML code generated
+- Process the input to render in a web worker
 - Insert a toolbar with buttons that the user could press to generate Markdown code (H1, H2, bold...)
 - Save the Markdown code locally as a `.md` file.
 - Save the preview locally as a `.docx`, `.odt` or `.pdf` file
