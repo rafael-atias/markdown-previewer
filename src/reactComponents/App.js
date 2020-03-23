@@ -9,6 +9,7 @@ export default function App(props) {
     <article className="App">
       <header>
         <h1>A Markdown Previewer</h1>
+        <p><a href="https://github.com/rafael-atias/markdown-previewer">Official repo</a></p>
       </header>
       <section>
         <Editor
